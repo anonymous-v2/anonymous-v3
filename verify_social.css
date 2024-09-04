@@ -1,0 +1,146 @@
+/* Navbar Styles */
+.navbar {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Dropdown Button */
+.hacker-button {
+    background: #333;
+    color: #00ff00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.social-media-tools h2 {
+    font-size: 28px;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+.tool-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #111;
+}
+
+.tool-item h3 {
+    font-size: 20px;
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.tool-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tool-link:hover {
+    background-color: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+/* Centering and Styling for Verify Section */
+.verify-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.verify-button {
+    background-color: #00ff00;
+    color: #111;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.verify-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 255, 0, 0.4);
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.verify-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.verify-button:hover {
+    color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+.verify-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Container for buttons */
+.tool-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Individual button item */
+.button-item {
+    text-align: center;
+}
+

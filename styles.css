@@ -1,0 +1,343 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    background: #0d0d0d;
+}
+
+/* Background Effect */
+.background {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    background: url('https://www.transparenttextures.com/patterns/black-paper.png'), linear-gradient(to bottom, #0d0d0d, #111);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Dropdown Button */
+.hacker-button {
+    background: #333;
+    color: #00ff00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #00ff00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-links a:hover {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.hacker-button {
+    background-color: #111;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hacker-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00ff00;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.hacker-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.hacker-button:hover {
+    background-color: #00ff00;
+    color: #0d0d0d;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.hacker-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: #0d0d0d;
+    z-index: 1;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown below the button */
+    left: 0;
+    background-color: #222;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    min-width: 160px; /* Minimum width of the dropdown */
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Dropdown Content Items */
+.dropdown-content li {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    text-decoration: underline;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ensure Dropdown Fits within Viewport */
+.dropdown-content {
+    left: 0; /* Default positioning from the left edge of the button */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: 0; /* Adjust this as needed */
+}
+
+/* Adjust dropdown position if it goes off-screen */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 5px); /* Center the arrow */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+}
+
+/* If dropdown extends beyond viewport edges, shift it horizontally */
+.dropdown-content {
+    transform: translateX(calc(-50% + 10px)); /* Adjust for edge fitting */
+}
+
+.dropdown:hover .dropdown-content {
+    transform: translateX(calc(-50% + 10px)); /* Keeps dropdown within viewport */
+}
+
+/* Hacking News Styles */
+.hacking-news {
+    background-color: #111;
+    color: #00ff00;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.hacking-news h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 5px;
+}
+
+.news-item {
+    margin-bottom: 15px;
+}
+
+.news-item h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.news-item p {
+    margin: 5px 0 0;
+}
+
+/* Video Container Styles */
+.video-container {
+    margin-top: 20px;
+}
+
+.video-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px; /* Adjust as needed */
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #00ff00;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-top: 1px solid #00ff00;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Custom Scrollbar for WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #222; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00; /* Color of the scrollbar thumb on hover */
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,77 @@
+/* Cookie Banner Styles */
+.cookie-banner {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the banner */
+    width: 80%;
+    max-width: 600px; /* Limit the width */
+    text-align: center;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    display: none; /* Hidden by default, shown via JS */
+    z-index: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    /* Adding some vertical spacing for the content within */
+    padding-top: 20px;
+}
+
+.cookie-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cookie-banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.cookie-banner a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.cookie-banner a:hover {
+    text-decoration: underline;
+}
+
+.cookie-button {
+    background: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cookie-button:hover {
+    background: #00cc00;
+}
+
+/* Main Content Blur */
+.main-content {
+    transition: filter 0.3s ease;
+    /* Add relative positioning for proper application of the blur effect */
+    position: relative;
+}
+
+/* Apply blur effect when cookie not accepted */
+.main-content.blur {
+    filter: blur(8px);
+    pointer-events: none; /* Disable interaction with blurred content */
+}
+
+/* Optional: Adjust the body or other elements if needed */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Required for proper positioning of the blur effect */
+}

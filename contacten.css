@@ -1,0 +1,176 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    background: #0d0d0d;
+}
+
+/* Background Effect */
+.background {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    background: url('https://www.transparenttextures.com/patterns/black-paper.png'), linear-gradient(to bottom, #0d0d0d, #111);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+/* Other Navbar Styles */
+/* Your existing navbar CSS code */
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #111;
+    color: #00ff00;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #0d0d0d;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+.hacker-button {
+    align-self: flex-start;
+    background-color: #111;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.hacker-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00ff00;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.hacker-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.hacker-button:hover {
+    background-color: #00ff00;
+    color: #0d0d0d;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+/* Your existing footer CSS code */

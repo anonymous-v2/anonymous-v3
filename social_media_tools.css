@@ -1,0 +1,224 @@
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.social-media-tools h2 {
+    font-size: 28px;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+.tool-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #111;
+}
+
+.tool-item h3 {
+    font-size: 20px;
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.tool-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tool-link:hover {
+    background-color: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+
+
+/* Container for buttons */
+.tool-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Individual button item */
+.button-item {
+    text-align: center;
+}
+
+/* Container for tools box */
+.tools-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual tool item */
+.tool-item {
+    background-color: #222;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Dropdown Button */
+.hacker-button {
+    background: #333;
+    color: #00ff00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown below the button */
+    left: 0;
+    background-color: #222;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    min-width: 160px; /* Minimum width of the dropdown */
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Dropdown Content Items */
+.dropdown-content li {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    text-decoration: underline;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ensure Dropdown Fits within Viewport */
+.dropdown-content {
+    left: 0; /* Default positioning from the left edge of the button */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: 0; /* Adjust this as needed */
+}
+
+/* Adjust dropdown position if it goes off-screen */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 5px); /* Center the arrow */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+}
+
+/* If dropdown extends beyond viewport edges, shift it horizontally */
+.dropdown-content {
+    transform: translateX(calc(-50% + 10px)); /* Adjust for edge fitting */
+}
+
+.dropdown:hover .dropdown-content {
+    transform: translateX(calc(-50% + 10px)); /* Keeps dropdown within viewport */
+}
+
+/* Animation effect */
+.hacker-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 255, 0, 0.3);
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover effect for button */
+.hacker-button:hover {
+    color: #111;
+    background-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+.hacker-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+/* Update status text style */
+.update-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Heading style */
+.social-media-tools h2 {
+    text-align: center;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+

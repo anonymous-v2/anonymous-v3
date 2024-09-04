@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    background-color: #111;
+}
+
+.background {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Dropdown Button */
+.hacker-button {
+    background: #333;
+    color: #00ff00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    position: relative;
+}
+
+.navbar .nav-links a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the dropdown below the button */
+    left: 0;
+    background-color: #222;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    min-width: 160px; /* Minimum width of the dropdown */
+    z-index: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Dropdown Content Items */
+.dropdown-content li {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    text-decoration: underline;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ensure Dropdown Fits within Viewport */
+.dropdown-content {
+    left: 0; /* Default positioning from the left edge of the button */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: 0; /* Adjust this as needed */
+}
+
+/* Adjust dropdown position if it goes off-screen */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 5px); /* Center the arrow */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+}
+
+/* If dropdown extends beyond viewport edges, shift it horizontally */
+.dropdown-content {
+    transform: translateX(calc(-50% + 10px)); /* Adjust for edge fitting */
+}
+
+.dropdown:hover .dropdown-content {
+    transform: translateX(calc(-50% + 10px)); /* Keeps dropdown within viewport */
+}
+
+
+.hacker-button:hover {
+    background-color: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.main-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00ff00;
+}
+
+.main-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #00ff00;
+}
+
+/* Tools List Styles */
+.exploit-tools-list, .social-engineering-tools-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exploit-tools-list li, .social-engineering-tools-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #111;
+}
+
+.exploit-tools-list h3, .social-engineering-tools-list h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #00ff00;
+}
+
+.exploit-tools-list p, .social-engineering-tools-list p {
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+/* Install Link Styles */
+.install-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #00ff00;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.install-link:hover {
+    background-color: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: #00ff00;
+    padding: 15px;
+    text-align: center;
+    border-top: 2px solid #00ff00;
+    margin-top: auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #00ff00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

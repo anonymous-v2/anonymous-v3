@@ -1,0 +1,98 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    background: #0d0d0d;
+}
+
+/* Background Effect */
+.background {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    background: url('https://www.transparenttextures.com/patterns/black-paper.png'), linear-gradient(to bottom, #0d0d0d, #111);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Dropdown Button */
+.hacker-button {
+    background: #333;
+    color: #00ff00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Other Navbar Styles */
+/* Your existing navbar CSS code */
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* DDoS Map Section */
+.ddos-map {
+    background-color: #111;
+    color: #00ff00;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.ddos-map h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 5px;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer Styles */
+/* Your existing footer CSS code */

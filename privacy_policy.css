@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Custom Scrollbar for WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #222; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00; /* Color of the scrollbar thumb on hover */
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background: #000;
+    color: #00ff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Privacy Policy Page Styles */
+.privacy-policy {
+    padding: 20px;
+    background: #111;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    color: #fff;
+}
+
+.privacy-policy h1 {
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.policy-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    background: #222;
+}
+
+.policy-section h2 {
+    color: #00ff00;
+    margin-top: 0;
+}
+
+.policy-section p {
+    color: #aaa;
+}
+
+.policy-section a {
+    color: #00ff00;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: #00ff00;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-links a {
+    color: #00ff00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
