@@ -35,68 +35,7 @@ body {
 
 /* Dropdown Button */
 .hacker-button {
-    background: #333;
-    color: #00ff00;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-}
-
-.brand {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links a {
-    color: #00ff00;
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #fff;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 2px;
-    background: #00ff00;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.nav-links a:hover {
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-}
-
-.hacker-button {
-    background-color: #111;
+    background: #111;
     color: #00ff00;
     border: 2px solid #00ff00;
     padding: 8px 16px;
@@ -124,11 +63,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.hacker-button:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
 .hacker-button:hover {
     background-color: #00ff00;
     color: #0d0d0d;
@@ -139,7 +73,56 @@ body {
     transform: scaleX(1);
     transform-origin: left;
     background-color: #0d0d0d;
-    z-index: 1;
+}
+
+/* Navbar Brand */
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #00ff00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Dropdown Menu */
@@ -148,7 +131,6 @@ body {
     display: inline-block;
 }
 
-/* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -161,6 +143,22 @@ body {
     z-index: 1;
     padding: 10px;
     box-sizing: border-box;
+    transform: translateX(calc(-50% + 10px)); /* Adjust for edge fitting */
+}
+
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 5px); /* Center the arrow */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateX(calc(-50% + 10px)); /* Keeps dropdown within viewport */
 }
 
 /* Dropdown Content Items */
@@ -177,41 +175,6 @@ body {
 
 .dropdown-content li a:hover {
     text-decoration: underline;
-}
-
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Ensure Dropdown Fits within Viewport */
-.dropdown-content {
-    left: 0; /* Default positioning from the left edge of the button */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    left: 0; /* Adjust this as needed */
-}
-
-/* Adjust dropdown position if it goes off-screen */
-.dropdown-content::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 5px); /* Center the arrow */
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #222 transparent;
-}
-
-/* If dropdown extends beyond viewport edges, shift it horizontally */
-.dropdown-content {
-    transform: translateX(calc(-50% + 10px)); /* Adjust for edge fitting */
-}
-
-.dropdown:hover .dropdown-content {
-    transform: translateX(calc(-50% + 10px)); /* Keeps dropdown within viewport */
 }
 
 /* Hacking News Styles */
@@ -304,7 +267,6 @@ body {
     text-decoration: underline;
 }
 
-
 /* Custom Scrollbar for WebKit Browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
@@ -325,7 +287,7 @@ body {
     background: #00cc00; /* Color of the scrollbar thumb on hover */
 }
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;

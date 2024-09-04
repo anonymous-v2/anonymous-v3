@@ -124,23 +124,23 @@
 
 /* Adding Custom Background Images */
 .news-box:nth-child(1) {
-    background-image: url('images/hacker-box1.jpg');
+    background-image: url('anonymous-v5.jpg');
 }
 
 .news-box:nth-child(2) {
-    background-image: url('images/hacker-box2.jpg');
+    background-image: url('anonymous-v5.jpg');
 }
 
 .news-box:nth-child(3) {
-    background-image: url('images/hacker-box3.jpg');
+    background-image: url('anonymous-v5.jpg');
 }
 
 .news-box:nth-child(4) {
-    background-image: url('images/hacker-box4.jpg');
+    background-image: url('anonymous-v5.jpg');
 }
 
 .news-box:nth-child(5) {
-    background-image: url('images/hacker-box5.jpg');
+    background-image: url('anonymous-v5.jpg');
 }
 
 /* Heading within News Box */
@@ -153,8 +153,9 @@
 
 /* Paragraph within News Box */
 .news-box p {
+    font-size: 1.0em; /* Increase heading size within news items */
     margin-top: 10px;
-    color: #aaa;
+    color: #f70606;
     position: relative;
     z-index: 1; /* Ensures the paragraph text is above the background image */
 }
