@@ -1,0 +1,66 @@
+/* Form Container Styles */
+.form-container {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-color: #222; /* Dark background */
+    padding: 20px; /* Padding around inputs */
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* Glow effect */
+    max-width: 400px; /* Maximum width of the box */
+    margin: 20px auto; /* Center the box on the page */
+}
+
+/* Input Field Styles */
+input[type="text"], input[type="number"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding for better appearance */
+    margin: 10px 0; /* Margin for spacing */
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #1a1a1a; /* Dark background */
+    color: #00ff00; /* Green text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 16px; /* Font size */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Glow effect */
+}
+
+/* Input Field Focus Effect */
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none; /* Remove default outline */
+    border-color: #00cc00; /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(0, 204, 0, 0.7); /* Brighten glow on focus */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #00ff00; /* Button background */
+    color: #0d0d0d; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Margin above the button */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #00cc00; /* Darken button on hover */
+}
+.result-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #222;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    color: #00ff00;
+}
+
+.error {
+    color: red; /* Error messages in red */
+}

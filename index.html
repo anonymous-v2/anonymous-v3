@@ -21,11 +21,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    
+
     <title>Anonymous.nl</title>
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="cookie.css">
+    <link rel="stylesheet" href="admin_panel_button.css">
     <link rel="stylesheet" href="index.css">
 
 </head>
@@ -47,8 +48,9 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="exploit_tools.html">Exploits Tools</a></li>
                 <li><a href="social_engineering_tools.html">Social Engineering Tools</a></li>
-                <li><a href="doss_attack.html">DDos Attack's</a></li>
-                <li><a href="verify_social_media.html">socialMedia Tools</a></li>
+                <li><a href="doss_attack.html">DDoS Attack's</a></li>
+                <li><a href="verify_social_media.html">SocialMedia Tools</a></li>
+                <li><a href="infograbber.html">InfoGrabber</a></li>
                 <li><a href="#">Jailbreaks</a></li>
                 <li><a href="movie_hall.html">MovieHall</a></li>
                 <li class="dropdown">
@@ -60,6 +62,11 @@
                         <li><a href="contacten.html">Contact</a></li>
                     </ul>
                 </li>
+                <!-- Admin Panel Button -->
+                <li id="admin-panel" class="nav-item">
+                    <a href="admin_login.html" class="admin-button">Admin Panel</a>
+                </li>
+                
             </ul>
         </nav>
     
@@ -177,6 +184,17 @@
 
         window.onload = checkCookieConsent;
     </script>
+
+<script>
+    // Simulate admin check (replace with actual admin check logic)
+    var isAdmin = true; // Set to true if the user is an admin, otherwise false
+
+    // Show or hide the Admin Panel button based on the admin status
+    if (isAdmin) {
+        document.getElementById('admin-panel').style.display = 'block';
+    }
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "clearbit": "^1.3.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "install": "^0.13.0",
+    "ipinfo": "^1.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "puppeteer": "^23.4.0",
+    "twitter-api-v2": "^1.17.2"
+  },
+  "name": "anonymous-v3",
+  "version": "1.0.0",
+  "main": "ddos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

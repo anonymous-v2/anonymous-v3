@@ -1,3 +1,26 @@
+/* Admin Panel Button */
+.admin-button {
+    background: #444;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+    background-color: #555;
+}
+
+/* Hide Admin Panel Button by default */
+#admin-panel {
+    display: none; /* Hidden by default */
+}
+
+
 /* Hacking News Styles */
 .hacking-news {
     background-color: #111;
@@ -124,7 +147,8 @@
 
 /* Adding Custom Background Images */
 .news-box:nth-child(1) {
-    background-image: url('anonymous-v5.jpg');
+    
+    background-image: url('anonymous-v5.jpg') ;
 }
 
 .news-box:nth-child(2) {
